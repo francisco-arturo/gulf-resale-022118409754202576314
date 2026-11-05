@@ -1,0 +1,11 @@
+dev-server.mjs
+check.mjs
+smoke.mjs
+DEMO.md
+AGENTS.md
+feature_list.json
+progress.md
+session-handoff.md
+init.ps1
+init.sh
+.harness/
