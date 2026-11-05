@@ -938,11 +938,11 @@ function confirmOrder(id) {
     state: 'done',
     detail:
       step.label === 'Delivered'
-        ? `Confirmed just now. ${money(order.total)} released to ${order.seller}.`
+        ? `Confirmed just now. Escrow released to ${order.seller}.`
         : step.detail
   }));
   render();
-  toast(`Delivery confirmed. ${money(order.total)} released to ${order.seller}.`);
+  toast(`Delivery confirmed. Escrow released to ${order.seller}.`);
 }
 
 /* ---------- sell ---------- */
