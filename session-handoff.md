@@ -2,7 +2,7 @@
 
 ## Last Updated
 
-- 2026-11-05: built the complete local prototype, verified it, and handed over at `http://127.0.0.1:4187`.
+- 2026-11-05: built, reviewed, fixed, pushed, deployed and proposed. Live at `https://gulf-resale-022118409754202576314.vercel.app`; proposal at `upwork-kit/drafts/gulf-resale-022118409754202576314.md`.
 
 ## Current Objective
 
@@ -11,15 +11,17 @@ Thanya: GCC peer-to-peer resale marketplace MVP with verified sellers, escrow ch
 ## State
 
 - `proto-001` is **done**. `DEMO.md` holds the click path and the honest list of what is seeded.
+- Repository: `https://github.com/francisco-arturo/gulf-resale-022118409754202576314`.
+- Live: `https://gulf-resale-022118409754202576314.vercel.app` (deployment `dpl_Ej5hvtUR2CLAzcozeaypyGfqq6Ru`).
 - Local review server: `node dev-server.mjs 4187` -> `http://127.0.0.1:4187`.
 - Verification: `powershell -ExecutionPolicy Bypass -File .\init.ps1` -> PASS, 34 static checks plus 11 render assertions.
-- Nothing is pushed or deployed. The user must approve the local build and provide a repository URL first.
+- The checkout modal was fixed after review: viewport-bounded height, scrolling columns, pay control directly under the total.
 
 ## Recommended Next Step
 
-1. If the user asks for changes, make them in this directory and re-run `.\init.ps1`.
-2. On approval, confirm the repository URL, add it to the workspace `github.json` allowlist, push, then run `node .harness/deploy.mjs gulf-resale-022118409754202576314` from the workspace root.
-3. Update `DEMO.md` with the live URL before any proposal work.
+1. Review the proposal at `upwork-kit/drafts/gulf-resale-022118409754202576314.md` and run `upwork-kit/CHECKLIST.md` before sending.
+2. If the user asks for product changes, make them here, re-run `.\init.ps1`, then redeploy with `node .harness/deploy.mjs gulf-resale-022118409754202576314`.
+3. Keep the deployment and repository URLs in `DEMO.md` and `progress.md` current.
 
 ## Files
 
@@ -35,4 +37,4 @@ Thanya: GCC peer-to-peer resale marketplace MVP with verified sellers, escrow ch
 
 ## Blockers
 
-- None. Waiting on user review; do not deploy or propose before approval.
+- None.

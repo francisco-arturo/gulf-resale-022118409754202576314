@@ -3,9 +3,10 @@
 ## Current State
 
 - Built 2026-11-05 as **Thanya**, a buyer-first slice of the GCC peer-to-peer resale marketplace in the brief.
-- Local review is running at **http://127.0.0.1:4187** (`node dev-server.mjs 4187`).
+- Pushed to `https://github.com/francisco-arturo/gulf-resale-022118409754202576314` and deployed to `https://gulf-resale-022118409754202576314.vercel.app`.
+- Local review is also running at **http://127.0.0.1:4187** (`node dev-server.mjs 4187`).
 - Static HTML, CSS and JavaScript only. No dependencies, no backend, no auth. Deploy-ready for Vercel with `index.html` at the repository root.
-- `proto-001` is **done**. Nothing is pushed or deployed; the next gate is the user's review and a repository URL.
+- `proto-001` is **done**. The proposal is drafted at `upwork-kit/drafts/gulf-resale-022118409754202576314.md`.
 
 ## What was built
 
@@ -28,19 +29,23 @@
 | `node dev-server.mjs 4187` | Listening on `http://127.0.0.1:4187`; served `/` with HTTP 200, 8,253 bytes. |
 | `Invoke-WebRequest /styles.css` | HTTP 200, 53,096 bytes. |
 | `Invoke-WebRequest /app.js` | HTTP 200, 62,180 bytes. |
+| `node .harness/deploy.mjs gulf-resale-022118409754202576314` | READY in 5s, `dpl_Ej5hvtUR2CLAzcozeaypyGfqq6Ru`, live at `https://gulf-resale-022118409754202576314.vercel.app`. |
+| Node fetch against the live alias | `/` 200, 8,247 bytes, title `Thanya — the Gulf's trusted resale market`; `/styles.css` 200 with the fixed checkout height; `/app.js` 200. |
+
+The checkout modal was repaired after the first review: it now has a viewport-bounded height, independently scrolling columns, and the pay control sits directly under the total instead of being pushed to the clipped bottom.
 
 The checked contract covers: English-only UI, unique HTML ids, parseable JavaScript, seeded listings, search and filters, item route, escrow checkout, order release, seller publish flow, ops verification actions, light-mode-only styling, mobile layout, icon sizing, HTTPS photography and the local server excluded from deployment. The render smoke test boots `app.js` against a DOM stub and exercises every major view, so missing selectors and broken templates fail before handover.
 
 ## Current Objective
 
-Hand the local build over for review. No push, no deploy and no proposal before the user approves it and shares a repository URL.
+Both handovers are complete, and the proposal is drafted against the live deployment.
 
 ## Next
 
-1. User opens **http://127.0.0.1:4187/#/browse** and walks the path in `DEMO.md`.
-2. On approval: confirm the repository URL, add it to `github.json` -> `approved_remotes`, push, then `node .harness/deploy.mjs gulf-resale-022118409754202576314` from the workspace root.
-3. Update `DEMO.md` with the live URL, then write the proposal only if asked.
+1. Review the proposal at `upwork-kit/drafts/gulf-resale-022118409754202576314.md` and run the kit checklist one last time before sending.
+2. If the client replies, keep changes in this directory and redeploy with `node .harness/deploy.mjs gulf-resale-022118409754202576314`.
+3. Keep `DEMO.md`, `github.json` and `deployment.json` current if the build changes.
 
 ## Blockers
 
-- None. Deployment is intentionally waiting on user approval.
+- None.

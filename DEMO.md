@@ -4,11 +4,11 @@ Thanya is a buyer-first slice of the GCC resale marketplace described in the bri
 pre-owned pieces across the Gulf, open a listing, check out with escrow, then track and release the
 order. Seller listing and an operations console sit behind the same header.
 
-- **Live URL:** not deployed yet. Deployment waits for local review and a repository URL from the user.
+- **Live URL:** `https://gulf-resale-022118409754202576314.vercel.app`
 - **Local review URL:** `http://127.0.0.1:4187`
 - **Start locally:** `node dev-server.mjs 4187` from this directory
 - **Deploy:** `node .harness/deploy.mjs gulf-resale-022118409754202576314` (from the workspace root)
-- **Last verified:** 2026-11-05
+- **Last verified:** 2026-11-05, live alias returned HTTP 200 with the checkout fix in `styles.css`.
 
 ## The 60-second path
 
