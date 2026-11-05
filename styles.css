@@ -776,6 +776,24 @@ h1, h2, h3, h4, p { margin: 0; }
   .footer-inner { grid-template-columns: 1.4fr 1fr 1fr; }
   .footer-cities { display: none; }
 }
+@media (max-width: 960px) {
+  body { padding-bottom: 74px; }
+  .mobile-tabs {
+    position: fixed; z-index: 70; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: stretch; justify-content: space-around;
+    background: rgba(248, 244, 236, .95); border-top: 1px solid var(--line);
+    backdrop-filter: blur(14px); padding: 7px 8px calc(7px + env(safe-area-inset-bottom));
+  }
+  .mobile-tabs a {
+    display: grid; place-items: center; gap: 3px; min-width: 64px;
+    padding: 4px 8px; border-radius: 10px;
+    font-size: 9px; font-weight: 600; letter-spacing: .02em; color: var(--muted);
+  }
+  .mobile-tabs a svg { width: 20px; height: 20px; }
+  .mobile-tabs a[aria-current="page"] { color: var(--forest); background: var(--sage); }
+  .toast { bottom: 88px; }
+}
+
 @media (max-width: 720px) {
   body { padding-bottom: 74px; }
   .announce { font-size: 9px; letter-spacing: .08em; gap: 7px; }
